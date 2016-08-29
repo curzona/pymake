@@ -11,4 +11,10 @@ setup(name='pymake',
       license='MIT License',
       packages=['pymake'],
       py_modules=['make', 'mkformat', 'mkparse'],
-      scripts=['make.py', 'mkformat.py', 'mkparse.py'])
+      scripts=['make.py', 'mkformat.py', 'mkparse.py'],
+      entry_points={
+          'console_scripts': [
+            'make = make:main'
+          ]
+      }
+      )
